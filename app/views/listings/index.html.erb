@@ -1,0 +1,16 @@
+<h1> Floats Available For Rent </h1>
+
+<ul>
+    <% for listing in @listings %>
+<li>
+    <%= listing.title %>
+    <%= listing.description %>
+    <%= listing.size %>
+    <%= number_to_currency(listing.price) %>
+    <%= listing.location %>
+    <%= listing.description %>
+    <%= listing.postcode %>
+    <%= listing.availability %>
+</li>
+<% end %>
+</ul>
