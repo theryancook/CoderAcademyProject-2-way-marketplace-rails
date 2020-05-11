@@ -10,6 +10,15 @@
   </head>
 
   <body>
+          #not sure that I want it to show/hide. Might want to show it all the time, depends on styling
+    <% if user_signed_in? %> 
+      <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log In / Sign Up", new_user_session_path %>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
