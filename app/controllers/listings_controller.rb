@@ -47,6 +47,15 @@ class ListingsController < ApplicationController
         end
     end
 
+    def destroy
+        @listing = current_user.listings.find_by_id(params["id"])
+
+        if @listing
+            @listing.destroy
+        end
+        redirect_to listing_path
+    end
+
     private
     def listing_params
         params.require(:listing).permit(:title, :model, :description, :size, :price, :locatoin, :postcode, :availabiity)
