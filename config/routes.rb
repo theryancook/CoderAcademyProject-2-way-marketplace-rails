@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   post "/listings", to: "listings#create"
 
+  get "/listings/:id", to: "listings#show", as: "listing"
+
 
 end
