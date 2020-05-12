@@ -22,6 +22,16 @@ class ListingsController < ApplicationController
         @listing = Listing.find(params["id"])
     end
 
+    def edit
+        @listing = current_user.listings.find_by_id(params["id"])
+
+        if @listing
+            render("edit")
+        else
+            redirect_to listings_path
+        end
+    end
+
     private
     def listing_params
         params.require(:listing).permit(:title, :model, :description, :size, :price, :locatoin, :postcode, :availabiity)

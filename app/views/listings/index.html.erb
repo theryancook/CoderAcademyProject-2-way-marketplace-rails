@@ -5,6 +5,7 @@
 <ul>
     <% for listing in @listings %>
 <li>
+    <%= link_to "#{listing.title} - #{number_to_currency(listing.price)}", listing_path(listing.id) %>
     <%= listing.title %>
     <%= listing.description %>
     <%= listing.size %>
