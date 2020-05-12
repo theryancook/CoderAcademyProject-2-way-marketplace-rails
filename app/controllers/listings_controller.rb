@@ -32,6 +32,21 @@ class ListingsController < ApplicationController
         end
     end
 
+    def update
+        @listing = current_user.listings.find_by_id(params["id"])
+
+        if @listing
+            @listing.update(listing_params)
+            if @listing.errors.any?
+                render "edit"
+            else
+                redirect_to listings_path
+            end
+        else
+            redirect_to listings_path
+        end
+    end
+
     private
     def listing_params
         params.require(:listing).permit(:title, :model, :description, :size, :price, :locatoin, :postcode, :availabiity)

@@ -5,13 +5,17 @@ Rails.application.routes.draw do
 
   get "/listings", to: "listings#index", as: "listings"
 
-  get "/listings/new", to: "listings#new", as: "listing_path"
+  get "/listings/new", to: "listings#new", as: "new_listing"
 
   post "/listings", to: "listings#create"
 
   get "/listings/:id", to: "listings#show", as: "listing"
 
   get "/listings/:id/edit", to: "listings#edit", as: "edit_listing"
+
+  put "/listings/:id", to: "listings#update"
+
+  patch "/listings/:id", to: "listings#update"
 
 
 end

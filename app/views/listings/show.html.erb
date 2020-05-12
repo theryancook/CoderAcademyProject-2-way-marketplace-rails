@@ -6,7 +6,10 @@
 <%= number_to_currency(@listing.price) %>
 </br>
 Seller's email: <% @listing.user.email %>
-
+<br>
+<% if current_user.id == @listing.user.id %>
+    <%= link_to "edit", edit_listing_path(@listing.id) %>
+<% end %>
 <p>
     <%= @listing.description %>
 </p>

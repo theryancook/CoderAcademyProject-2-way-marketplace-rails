@@ -1,4 +1,4 @@
-<%= if listing.errors.any? %>
+<% if listing.errors.any? %>
     <ul>
         <% listing.errors.full_messages.each do |error| %>
             <li> <%= error %> </li>
