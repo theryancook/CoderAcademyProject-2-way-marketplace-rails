@@ -9,7 +9,10 @@ Seller's email: <% @listing.user.email %>
 <br>
 <% if current_user.id == @listing.user.id %>
     <%= link_to "edit", edit_listing_path(@listing.id) %>
-    <%= form_with model: @listing, local: true, method: "delete" %>
+
+    <%= form_with model: @listing, local: true, method: "delete" do |form| %>
+        <%= submit_tag "Remove Listing" %
+    <% end %>
 <% end %>
 <p>
     <%= @listing.description %>

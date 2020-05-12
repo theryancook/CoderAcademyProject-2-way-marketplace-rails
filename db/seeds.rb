@@ -6,3 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+user = User.new(
+    :email                 => "abc@abc.com",
+    :password              => "123456",
+    :password_confirmation => "123456"
+)
+user.save!
+
+sizes = [
+  "Small",
+  "Medium",
+  "Large"
+]
+
+sizes.each do |size|
+  Size.create(size: size)
+end
+
