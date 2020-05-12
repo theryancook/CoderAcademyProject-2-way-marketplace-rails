@@ -21,7 +21,7 @@
     </div>
     <div>
         <%= form.label :size %>
-        <%= form.text_field :size, value: listing.size %>
+        <%= form.collection_select :size_id, Size.all, :id, :size %>
     </div>
     <div>
         <%= form.label :price %>
