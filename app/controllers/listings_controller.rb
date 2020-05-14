@@ -29,7 +29,7 @@ class ListingsController < ApplicationController
         if @listing
             render("edit")
         else
-            redirect_to listings_path
+            redirect_to root_path
         end
     end
 
@@ -41,10 +41,10 @@ class ListingsController < ApplicationController
             if @listing.errors.any?
                 render "edit"
             else
-                redirect_to listings_path
+                redirect_to root_path
             end
         else
-            redirect_to listings_path
+            redirect_to root_path
         end
     end
 
