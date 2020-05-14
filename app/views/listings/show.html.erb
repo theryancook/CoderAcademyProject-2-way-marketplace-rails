@@ -1,24 +1,28 @@
-<h1> <%= @listing.title %> </h1>
-<% if @listing.picture.attached? %>
-<%= image_tag @listing.picture, style: "width: 200px" %>
-<% end %>
-</br>
-<%= number_to_currency(@listing.price) %>
-</br>
-Seller's email: <%= @listing.user.email %>
+<div class="container text-center">
 
-</br>
+    <h1> <%= @listing.title %> </h1>
+    <% if @listing.picture.attached? %>
+    <%= image_tag @listing.picture, style: "width: 200px" %>
+    <% end %>
+    </br>
+    <%= number_to_currency(@listing.price) %>
+    </br>
+    Seller's email: <%= @listing.user.email %>
 
-<% if current_user.id == @listing.user.id %>
-    <%= link_to "edit", edit_listing_path(@listing.id) %>
+    </br>
 
-    <%= form_with model: @listing, local: true, method: :delete do |form| %>
-        <%= submit_tag "delete" %>
+    <% if current_user.id == @listing.user.id %>
+        <%= link_to "edit", edit_listing_path(@listing.id) %>
+
+        <%= form_with model: @listing, local: true, method: :delete do |form| %>
+            <%= submit_tag "delete" %>
+        <% end %>
+
+        
     <% end %>
 
-    
-<% end %>
+    <p>
+        <%= @listing.description %>
+    </p>
 
-<p>
-    <%= @listing.description %>
-</p>
+</div>
