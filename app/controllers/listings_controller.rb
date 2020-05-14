@@ -4,6 +4,9 @@ class ListingsController < ApplicationController
     
     def index
         @listings = Listing.all
+        if params[:user_id] 
+            @listings = Listing.where(user_id: params[:user_id])
+        end
     end
 
     def new
@@ -31,6 +34,8 @@ class ListingsController < ApplicationController
         else
             redirect_to root_path
         end
+
+
     end
 
     def update

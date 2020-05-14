@@ -1,5 +1,77 @@
-<h1> NSW Horse Float For Lease - All Listings </h1>
-<% #will want to group these together in a CTA top middle %>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">Air Float</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <% if user_signed_in? %>
+      <%= link_to "My Listings", root_path(user_id: current_user.id), :class => "nav-link" %>
+    <% end %>
+      </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+    </li>
+   <% if user_signed_in? %>
+    <li class="nav-item active">
+    <a class="nav-link">Currently Logged In As <u><%= current_user.email %></u> <span class="sr-only">(current)</span></a>
+  </li>
+  <%  else %>
+        <li class="nav-item active">
+        <a class="nav-link">Currently Not Logged In <span class="sr-only">(current)</span></a>
+      </li>
+   <% end %>
+
+   <% if user_signed_in? %>
+  <li class="nav-item active">
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "nav-link"  %>
+</li>
+
+<%  else %>
+
+<% end %>
+  </ul>
+  </div>
+</nav>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1> Air Float. </h1>
+      <p class="lead text-muted">A community for horse enthusiasts to help each other out with horse transportation.</p>
+      <% if user_signed_in? %>
+        <p> <%= link_to "Create A New Listing", new_listing_path, :class => "btn btn-primary my-2" %> </p>  
+      <% else %>
+        <p> <%= link_to "Sign Up or Log In", new_user_session_path, :class => "btn btn-primary my-2" %> </p>
+      <% end %>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+
+</main>
+
 <h2> <%= link_to "Create A New Listing", new_listing_path %> </h2>
 
 <% for listing in @listings %>
