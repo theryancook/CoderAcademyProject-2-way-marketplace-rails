@@ -1,20 +1,15 @@
-<h1> NSW Horse Float For Lease </h1>
+<h1> NSW Horse Float For Lease - All Listings </h1>
+<% #will want to group these together in a CTA top middle %>
+<h2> <%= link_to "Create A New Listing", new_listing_path %> </h2>
 
-<%= link_to "Create A New Listing", new_listing_path %>
+<% for listing in @listings %>
+<div>
+    <%= link_to listing_path(listing.id) do %>
+    <%= image_tag listing.picture if listing.picture.attached? %>
+ <% end %> <br>
+    <%= link_to "#{listing.title}", listing_path(listing.id) %> <br>
+    <%= link_to "#{number_to_currency(listing.price)}", listing_path(listing.id) %> <br>
+    <%= link_to "#{listing.location}", listing_path(listing.id) %> <br>
 
-<ul>
-    <% for listing in @listings %>
-<li>
-    <%= link_to "#{listing.title} - #{number_to_currency(listing.price)}", listing_path(listing.id) %>
-    <%= listing.title %>
-    <%= listing.description %>
-    <%= listing.size_id %>
-    <%= number_to_currency(listing.price) %>
-    <%= listing.location %>
-    <%= listing.description %>
-    <%= listing.postcode %>
-    <%= listing.availability %>
-    
-</li>
+</div>
 <% end %>
-</ul>

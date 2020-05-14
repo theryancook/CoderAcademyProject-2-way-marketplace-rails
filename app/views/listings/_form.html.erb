@@ -33,7 +33,7 @@
     </div>
     <div>
         <%= form.label :availability %>
-        <%= form.date_field :location, value: listing.availability%>
+        <%= form.date_field :availability, value: listing.availability%>
     </div>
     <div>
         <%= form.label :description %>
@@ -41,7 +41,7 @@
     </div>
     <div>
         <%= form.label :image %>
-        <%= form.file_field :picture, accept: "image/png,image/gif,image/jpeg,image/jpg" %>
+        <%= form.file_field :picture, accept:"image/png,image/gif,image/jpeg,image/jpg" %>
     </div>
     <div>
         <%= form.submit %>
