@@ -16,10 +16,6 @@
         <%= form.text_field :model, value: listing.model %>
     </div>
     <div>
-        <%= form.label :description %>
-        <%= form.text_area :description, value: listing.description %>
-    </div>
-    <div>
         <%= form.label :size %>
         <%= form.collection_select :size_id, Size.all, :id, :size %>
     </div>
@@ -34,6 +30,14 @@
     <div>
         <%= form.label :postcode %>
         <%= form.number_field :postcode, value: listing.postcode %>
+    </div>
+    <div>
+        <%= form.label :availability %>
+        <%= form.date_field :location, value: listing.availability%>
+    </div>
+    <div>
+        <%= form.label :description %>
+        <%= form.text_area :description, value: listing.description %>
     </div>
     <div>
         <%= form.label :image %>

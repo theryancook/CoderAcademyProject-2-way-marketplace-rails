@@ -1,5 +1,6 @@
 class ListingsController < ApplicationController
-    before_action :authenticate_user! #actually want this for only when items get clicked on. Figure it out
+
+    before_action :authenticate_user!, except: :index
     
     def index
         @listings = Listing.all
@@ -14,7 +15,7 @@ class ListingsController < ApplicationController
         if @listing.errors.any?
             render "new"
         else
-            redirect_to listings_path
+            redirect_to root_path
         end
     end
 
@@ -53,12 +54,12 @@ class ListingsController < ApplicationController
         if @listing
             @listing.destroy
         end
-        redirect_to listing_path
+        redirect_to root_path
     end
 
     private
     def listing_params
-        params.require(:listing).permit(:title, :model, :description, :size, :price, :locatoin, :postcode, :availabiity)
+        params.require(:listing).permit(:title, :model, :description, :size_id, :price, :locatoin, :postcode, :availabiity)
     end
 
 end

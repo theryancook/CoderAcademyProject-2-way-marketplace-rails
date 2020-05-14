@@ -1,6 +1,6 @@
-<h1> Floats Available For Rent </h1>
+<h1> NSW Horse Float For Lease </h1>
 
-<%= link_to "Sell", new_listing_path %>
+<%= link_to "Create A New Listing", new_listing_path %>
 
 <ul>
     <% for listing in @listings %>
@@ -8,12 +8,13 @@
     <%= link_to "#{listing.title} - #{number_to_currency(listing.price)}", listing_path(listing.id) %>
     <%= listing.title %>
     <%= listing.description %>
-    <%= listing.size %>
+    <%= listing.size_id %>
     <%= number_to_currency(listing.price) %>
     <%= listing.location %>
     <%= listing.description %>
     <%= listing.postcode %>
     <%= listing.availability %>
+    
 </li>
 <% end %>
 </ul>
