@@ -42,114 +42,48 @@
     </ul>
 <% end %>
 
-
-      <div class="album py-5 bg-light">
-        <div class="container">
+<div class="album py-5 bg-light">
+    <div class="container">
         <h1>Create A New Listing</h1><br>
-            <%= form_with model: listing, local: true do |form| %>
-        <div class="form-group">
-            <%= form.label :title %>
-            <%= form.text_field :title, value: listing.title, class: "form-control", id: "exampleFormControlInput1", placeholder: "eg. Almost New, 2 Horse Float" %>
-        </div>
-        <div class="form-group">
-            <%= form.label :model %>
-            <%= form.text_field :model, value: listing.model, class: "form-control", id: "exampleFormControlInput1", placeholder: "eg. Regency 2 Horse Angle Load Deluxe" %>
-        </div>
-        <div class="form-group">
-            <%= form.label :size %>
-            <%= form.collection_select :size_id, Size.all, :id, :size, class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref" %>
-        </div>
-        <div class="form-group">
-            <%= form.label :price %>
-            <%= form.number_field :price, value: listing.price, min: 0, class: "form-control", id: "exampleFormControlInput1", placeholder: "Per Day Basis" %>
-        </div>      
-        <div class="form-group">
-            <%= form.label :location %>
-            <%= form.text_field :location, value: listing.location, class: "form-control", id: "exampleFormControlInput1", placeholder: "Per Day Basis" %>
-        </div>         
-        <div class="form-group">
+        <%= form_with model: listing, local: true do |form| %>
+    <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, value: listing.title, class: "form-control", id: "exampleFormControlInput1", placeholder: "eg. Almost New, 2 Horse Float" %>
+    </div>
+    <div class="form-group">
+        <%= form.label :model %>
+        <%= form.text_field :model, value: listing.model, class: "form-control", id: "exampleFormControlInput1", placeholder: "eg. Regency 2 Horse Angle Load Deluxe" %>
+    </div>
+    <div class="form-group">
+        <%= form.label :size %>
+        <%= form.collection_select :size_id, Size.all, :id, :size, class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref" %>
+    </div>
+    <div class="form-group">
+        <%= form.label :price %>
+        <%= form.number_field :price, value: listing.price, min: 0, class: "form-control", id: "exampleFormControlInput1", placeholder: "On A Per Day Basis" %>
+    </div>      
+    <div class="form-group">
+        <%= form.label :location %>
+        <%= form.text_field :location, value: listing.location, class: "form-control", id: "exampleFormControlInput1", placeholder: "Your Suburb & State" %>
+    </div>         
+    <div class="form-group">
         <%= form.label :postcode %>
-        <%= form.number_field :postcode, value: listing.postcode, class: "form-control", id: "exampleFormControlInput1", placeholder: "Per Day Basis" %>
+        <%= form.number_field :postcode, value: listing.postcode, class: "form-control", id: "exampleFormControlInput1", placeholder: "Postcode" %>
     </div>  
     <div class="form-group">
-    <%= form.label :availability %>
-    <%= form.date_field :availability, value: listing.availability, class: "form-control", id: "exampleFormControlInput1", placeholder: "Per Day Basis" %>
-</div> 
-
-
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-        <%= form.submit %>
-        </div>
-        </div>
-      </form>
-              </div>
-            </div>
-            <div>
-            <%= form.submit %>
-        </div>
-             <% end %>
-    </main>
-
-
-
-<%= form_with model: listing, local: true do |form| %>
-    <div>
-        <%= form.label :title %>
-        <%= form.text_field :title, value: listing.title %>
-    </div>
-    <div>
-        <%= form.label :model %>
-        <%= form.text_field :model, value: listing.model %>
-    </div>
-    <div>
-        <%= form.label :size %>
-        <%= form.collection_select :size_id, Size.all, :id, :size %>
-    </div>
-    <div>
-        <%= form.label :price %>
-        <%= form.number_field :price, value: listing.price, min: 0 %>
-    </div>
-    <div>
-        <%= form.label :location %>
-        <%= form.text_field :location, value: listing.location%>
-    </div>
-    <div>
-        <%= form.label :postcode %>
-        <%= form.number_field :postcode, value: listing.postcode %>
-    </div>
-    <div>
         <%= form.label :availability %>
-        <%= form.date_field :availability, value: listing.availability%>
-    </div>
-    <div>
+        <%= form.date_field :availability, value: listing.availability, class: "form-control", id: "exampleFormControlInput1" %>
+    </div> 
+    <div class="form-group">
         <%= form.label :description %>
-        <%= form.text_area :description, value: listing.description %>
-    </div>
-    <div>
+        <%= form.text_area :description, value: listing.description, class: "form-control", id: "exampleFormControlInput1", placeholder: "Any Extra Details That You'd Like To Include" %>
+    </div>  
+    <div class="form-group">
         <%= form.label :image %>
-        <%= form.file_field :picture, accept:"image/png,image/gif,image/jpeg,image/jpg" %>
+        <%= form.file_field :picture, accept:"image/png,image/gif,image/jpeg,image/jpg", class: "form-control-file", id: "exampleFormControlInput1" %>
+    </div>          
+    <div class="form-group">
+        <%= form.submit %>
     </div>
-    <%= form.submit %>
-    </div>
-
-<% end %>
+        <% end %>
+</main>
