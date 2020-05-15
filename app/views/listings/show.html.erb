@@ -15,12 +15,31 @@
         <%= form_with model: @listing, local: true, method: :delete do |form| %>
             <%= submit_tag "delete" %>
         <% end %>
-
-        
     <% end %>
+
+    <button data-stripe="payment">
+        Proceed To Payment
+    </button>
 
     <p>
         <%= @listing.description %>
     </p>
 
 </div>
+
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  document
+    .querySelector("[data-stripe='payment']")
+    .addEventListener("click", () => {
+      const stripe = Stripe(
+        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+      );
+
+      stripe.redirectToCheckout({
+        sessionId: "<%= @session_id %>"
+      });
+    });
+</script>

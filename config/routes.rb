@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get "/about", to: "pages#home", as: "about"
 
+  get "/payment", to: "pages#payment", as: "payment"
+
   get "/", to: "listings#index", as: "root"
 
   get "/listings/new", to: "listings#new", as: "new_listing"
