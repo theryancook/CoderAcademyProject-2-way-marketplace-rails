@@ -55,7 +55,7 @@
         <div class="col-md-4">
         <%= link_to listing_path(listing.id) do %>
           <div class="card mb-4 shadow-sm">
-            <%= image_tag listing.picture %>
+            <%= image_tag listing.picture if listing.picture.attached? %>
             <div class="card-body">
               <p class="card-text">
               <%= listing.title %> <br> <%= number_to_currency(listing.price) %> <br> <%= listing.location %>
