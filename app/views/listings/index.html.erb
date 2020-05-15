@@ -54,6 +54,10 @@
         <div class="col-md-4">
         <%= link_to listing_path(listing.id) do %>
           <div class="card mb-4 shadow-sm">
+          <% if listing.picture.attached? %>
+          <% else %>
+          <%= image_tag("1.jpg") %>
+          <% end %>
             <%= image_tag listing.picture if listing.picture.attached? %>
             <div class="card-body">
               <p class="card-text">
