@@ -1,38 +1,35 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="/">Air Float</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-      <% if user_signed_in? %>
-      <%= link_to "My Listings", root_path(user_id: current_user.id), :class => "nav-link" %>
-    <% end %>
-      </li>
-      <li class="nav-item active">
-      <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
-    </li>
-   <% if user_signed_in? %>
-    <li class="nav-item active">
-    <a class="nav-link">Currently Logged In As <u><%= current_user.email %></u> <span class="sr-only">(current)</span></a>
-  </li>
-  <%  else %>
         <li class="nav-item active">
-        <a class="nav-link">Currently Not Logged In <span class="sr-only">(current)</span></a>
-      </li>
-   <% end %>
-
-   <% if user_signed_in? %>
-  <li class="nav-item active">
-  <%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "nav-link"  %>
-</li>
-
-<%  else %>
-
-<% end %>
-  </ul>
-  </div>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <% if user_signed_in? %>
+                <%= link_to "My Listings", root_path(user_id: current_user.id), :class => "nav-link" %>
+            <% end %>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+        </li>
+            <% if user_signed_in? %>
+        <li class="nav-item active">
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "nav-link"  %>
+        </li>
+            <% else %>
+        <li class="nav-item active">
+            <%= link_to "Log In", new_user_session_path, :class => "nav-link"  %>
+            <% end %>
+        </li>
+            <% if user_signed_in? %>
+        <li class="nav-item">
+            <a class="nav-link disabled">Currently Logged In As <u><%= current_user.email %></u> <span class="sr-only">(current)</span></a>
+        </li>
+            <% else %>
+        <li class="nav-item">
+            <a class="nav-link disabled">Currently Not Logged In <span class="sr-only">(current)</span></a> 
+            <% end %>
+        </li>
+    </ul>
 </nav>
 
 <main role="main">
@@ -80,20 +77,3 @@
         </div>
  
 </main>
-
-
-
-
-<h2> <%= link_to "Create A New Listing", new_listing_path %> </h2>
-
-<% for listing in @listings %>
-<div>
-    <%= link_to listing_path(listing.id) do %>
-    <%= image_tag listing.picture if listing.picture.attached? %>
- <% end %> <br>
-    <%= link_to "#{listing.title}", listing_path(listing.id) %> <br>
-    <%= link_to "#{number_to_currency(listing.price)}", listing_path(listing.id) %> <br>
-    <%= link_to "#{listing.location}", listing_path(listing.id) %> <br>
-
-</div>
-<% end %>
