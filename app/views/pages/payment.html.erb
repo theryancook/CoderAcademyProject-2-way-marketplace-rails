@@ -32,4 +32,16 @@
     </ul>
 </nav>
 
-<h1>Payment was a success! Youll now momentarily be re-directed to the listing again</h1>
+<html>
+<head>
+<script type="text/javascript">
+function delayedRedirect(){
+    window.location = "<%= root_path %>"
+}
+</script>
+</head>
+<body onLoad="setTimeout('delayedRedirect()', 5000)">
+<h1 class="text-center">You're about to be redirected back to the Home Page in around 5 seconds.<br><br>
+Thank you for supporting the community!</h1>
+</body>
+</html>
