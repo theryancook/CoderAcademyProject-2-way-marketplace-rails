@@ -32,8 +32,8 @@ sizes.each do |size|
   size_objects.push(Size.create(size: size))
 end
 
-user1.listings.create(title: "TITLE", model: "MODEL", description: "DESCRIPTION", size_id: size_objects[0].id, price: 100, location: "LOCATION", postcode: 1000, )
+user1.listings.create(title: "TITLE", model: "MODEL", description: "DESCRIPTION", size_id: size_objects[0].id, price: 100, location: "LOCATION", postcode: 1000)
 
-user1.listings.create(title: "TITLE", model: "MODEL", description: "DESCRIPTION", size_id: size_objects[0].id, price: 100, location: "LOCATION", postcode: 1000, )
+user1.listings.create(title: "TITLE", model: "MODEL", description: "DESCRIPTION", size_id: size_objects[0].id, price: 100, location: "LOCATION", postcode: 1000)
 
-user2.listings.create(title: "TITLE2", model: "MODEL2", description: "DESCRIPTION2", size_id: size_objects[1].id, price: 200, location: "LOCATION2", postcode: 2000, picture: "https://air-float.s3-ap-southeast-2.amazonaws.com/2ZCugG1JwEGUUj3sMrP9zFKy")
+user2.listings.create(title: "TITLE2", model: "MODEL2", description: "DESCRIPTION2", size_id: size_objects[1].id, price: 200, location: "LOCATION2", postcode: 2000)
