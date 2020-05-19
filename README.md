@@ -10,14 +10,40 @@ Put simply, I'm connecting horse float owners with other horse enthusiasts who r
 
 The main issue is accessibility - not being able to afford a horse float, or have anywhere to keep it (for example, apartment owners) shouldn’t mean that people don’t have access to one when required. It’s a small community, and floats are most often required for competitions (which many people from the same community will also be attending). As a result, there might not be one available in your small local community of riders. This opens up the possibility to connect with horse float owners from all over the city or region, who you would otherwise not be able to seek out and get in touch with. 
 
-
 ### R9 - A link (URL) to your deployed app (i.e. website)
 
 ```
 https://air-float.herokuapp.com/
 ```
 
+### R10 - A link to your GitHub repository (repo) - Ensure the repo is accessible by your Educators
 
+```
+https://github.com/theryancook/2-way-marketplace-rails
+```
+
+### R11 - Description of your marketplace app (website), including:
+### - Purpose
+### - Functionality / features
+### - Sitemap
+### - Screenshots
+### - Target audience
+### - Tech stack (e.g. html, css, deployment platform, etc)
+
+#### Purpose
+To have somewhere for people from the horse riding community to be able to find transport options for their horse when needed, as well as providing somewhere for horse float owners to generate some extra money while they’re not using their own float.
+
+#### Functionality / features
+User authentication - without being logged in, users are able to see the index of all the listings and summary information of those listings, but won’t be able to use any of the site functionality.
+
+Logging in and signing up - users will then be able to see more detailed information on others listings, as well as being able to create their own listings. In the navigation bar, users can see which account they’re logged in as and a specific view of all their own listings.
+
+Listings - Once the listing has been created, it can only be edited and deleted by the user who created the listing. If the current user is not the creator, that functionality is replaced by a payment link in order to rent the float.
+
+Payments - Made through Stripe, fully integrated. Directs users back to the index automatically once the purchase has been authenticated by Stripe.
+
+#### Sitemap
+![sitemap](app/assets/images/sitemap.png)
 
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
