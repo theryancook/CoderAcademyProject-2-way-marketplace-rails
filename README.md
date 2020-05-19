@@ -193,3 +193,11 @@ ActiveRecord::Schema.define(version: 2020_05_14_020731) do
   add_foreign_key "listings", "users"
 end
 ```
+
+### R20 - Describe the way tasks are allocated and tracked in your project
+
+Tasks were managed through the use of a Trello board. 
+
+I split up the Trello board into several different lists: into a general notes/remember list, a general to-do (to then be triaged from), per day to-do lists & finally a done list for features that had been finished. Tasks would be triaged from the general to-do list to a specific day that I thought that the task could be completed on. These day specific lists were re-evaluated each evening to ensure progress was being made and to confirm what should be handled on the following day. Once the task was finished, it was then moved into the done list.
+
+![trello](app/assets/images/trello.png)
