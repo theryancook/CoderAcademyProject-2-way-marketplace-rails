@@ -120,6 +120,12 @@ Horse owners and riders, anyone who requires horse transportation.
 
 ### R18 - Discuss the database relations to be implemented in your application
 
+First of all, a user entity needs to be created and active to be able to interact with any of the features at all.
+
+Once you have a user entity, you’ll then be able to create a listing which is attached to the user. All the fields in the listing form are required, and there will be error handling displayed that lets the user know if there’s any information missing (ensuring clean data in the database). We’ve got pre-loaded float sizes in the sizes entity of the database, which is accessible through the form as a drop down menu. If all aspects of the form are completed, then the user will be able to create a listing. The listing is then able to be edited and removed.
+
+If the user subsequently deletes that listing, the information in the database will be deleted as well (again, clean database).
+
 
 
 ```
