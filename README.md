@@ -76,6 +76,16 @@ Horse owners and riders, anyone who requires horse transportation.
 * Goolgle Maps
 * Gems: Devise
 
+### R12 - User stories for your app
+
+* As a user, you can view the index of all listings.
+* As a user, you can log in or sign up, as well as log out.
+* As a user, you can create your own listings.
+* As a user, you can edit and delete any of the information from your own listing.
+* As a user, you can see other listings with further details, including a map with location information.
+* As a user, you can see a complete list of your own listings.
+* As a user, you can pay for and lease horse floats from other users listings.
+
 
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
