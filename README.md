@@ -94,6 +94,32 @@ Horse owners and riders, anyone who requires horse transportation.
 
 ![ERD](app/assets/images/erd.png)
 
+### R15 - Explain the different high-level components (abstractions) in your app
+
+### R16 - Detail any third party services that your app will use
+
+* Stripe - this is used to handle users payments.
+* AWS S3 - used for scalable image storage and hosting.
+* Heroku - fast, all-in-one web hosting service.
+* Google Maps - displays the location on a map embedded on the site.
+* Devise - Rails Gem that handles user authentication.
+* Bootsrap - Rails Gem to implement simple and standardised styling.
+
+### R17 - Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+#### User
+* has_many :listings
+
+#### Listings
+* belongs_to :user
+* belongs_to :size
+* has_one_attached :picture (via S3)
+
+#### Size
+* has_one :listing
+
+### R18 - Discuss the database relations to be implemented in your application
+
 
 
 ```
