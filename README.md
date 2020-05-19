@@ -1,3 +1,17 @@
+## T2A2 Marketplace Project - Ryan Cook
+
+### R7 - Identification of the problem you are trying to solve by building this particular marketplace app.
+
+Horse riding is a somewhat niche sport and leisure activity. According to Wikipedia, around 400,000 people in Australia ride horses, which makes out to be just over 1% of the population. Unfortunately, it can become quite expensive, especially when you're looking at transportation. You’re not often needing to transport your horse, but when you do, a new horse float starts on average at around AUD $20,000. For most, this is a lot of money to have invested in something that functionally sits there doing nothing for the majority of the time. This marketplace lets people who would otherwise not be able to afford or find horse transport, to have access at a lower price point, or access at all. It also provides a platform for owners of horse floats to generate some extra cash flow at times when they don’t need to use it for themselves.
+
+Put simply, I'm connecting horse float owners with other horse enthusiasts who require the use of horse floats, for the betterment of the community.
+
+
+
+
+
+
+
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
 
