@@ -45,6 +45,22 @@ Payments - Made through Stripe, fully integrated. Directs users back to the inde
 #### Sitemap
 ![sitemap](app/assets/images/sitemap.png)
 
+#### Screenshots
+
+![index](app/assets/images/screen1.png)
+
+![index-logged-in](app/assets/images/screen2.png)
+
+![about](app/assets/images/screen3.png)
+
+![new-listing](app/assets/images/screen4.png)
+
+![view-listing](app/assets/images/screen5.png)
+
+![edit-listing](app/assets/images/screen6.png)
+
+![delete-listing](app/assets/images/screen7.png)
+
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
 
