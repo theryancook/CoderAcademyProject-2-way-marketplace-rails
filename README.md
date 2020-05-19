@@ -126,7 +126,7 @@ Once you have a user entity, you’ll then be able to create a listing which is 
 
 If the user subsequently deletes that listing, the information in the database will be deleted as well (again, clean database).
 
-
+### R19 - Provide your database schema design
 
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
