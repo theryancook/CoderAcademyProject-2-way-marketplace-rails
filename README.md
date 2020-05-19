@@ -103,7 +103,7 @@ Horse owners and riders, anyone who requires horse transportation.
 * Heroku - fast, all-in-one web hosting service.
 * Google Maps - displays the location on a map embedded on the site.
 * Devise - Rails Gem that handles user authentication.
-* Bootsrap - Rails Gem to implement simple and standardised styling.
+* Bootstrap - Rails Gem to implement simple and standardised styling.
 
 ### R17 - Describe your projects models in terms of the relationships (active record associations) they have with each other
 
