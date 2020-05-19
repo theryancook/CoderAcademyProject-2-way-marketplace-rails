@@ -90,6 +90,10 @@ Horse owners and riders, anyone who requires horse transportation.
 
 ![wireframe](app/assets/images/wireframe.png)
 
+### R14 - An ERD for your app
+
+![ERD](app/assets/images/erd.png)
+
 
 
 ```
