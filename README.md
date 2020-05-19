@@ -86,6 +86,11 @@ Horse owners and riders, anyone who requires horse transportation.
 * As a user, you can see a complete list of your own listings.
 * As a user, you can pay for and lease horse floats from other users listings.
 
+### R13 - Wireframes for your app
+
+![wireframe](app/assets/images/wireframe.png)
+
+
 
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
