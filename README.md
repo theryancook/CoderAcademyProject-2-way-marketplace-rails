@@ -46,7 +46,6 @@ Payments - Made through Stripe, fully integrated. Directs users back to the inde
 ![sitemap](app/assets/images/sitemap.png)
 
 #### Screenshots
-
 ![index](app/assets/images/screen1.png)
 
 ![index-logged-in](app/assets/images/screen2.png)
@@ -60,6 +59,23 @@ Payments - Made through Stripe, fully integrated. Directs users back to the inde
 ![edit-listing](app/assets/images/screen6.png)
 
 ![delete-listing](app/assets/images/screen7.png)
+
+#### Target audience
+Horse owners and riders, anyone who requires horse transportation.
+
+#### Tech stack (e.g. html, css, deployment platform, etc)
+* Ruby on Rails
+* PostgreSQL
+* Ruby
+* HTML
+* CSS
+* Heroku
+* AWS Simple Storage Service (S3)
+* Stripe
+* Bootstrap
+* Goolgle Maps
+* Gems: Devise
+
 
 ```
 ActiveRecord::Schema.define(version: 2020_05_14_020731) do
