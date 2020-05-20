@@ -96,6 +96,12 @@ Horse owners and riders, anyone who requires horse transportation.
 
 ### R15 - Explain the different high-level components (abstractions) in your app
 
+* We have an Index/Home page which displays every single listing of all the floats available.
+* We have a My Listings page which displays only those listings belonging to the user who’s currently logged in.
+* We have a Rails Form, which is accessed through Create A New Listing. This form has validation with error handling, and enables users to create a listing. The form will also let users edit their listing, simply by changing the information in that form. The listing can also be deleted through the form.
+* We have Google Maps integration, which displays the location of the float in the listing.
+* We have an integration with Stripe to facilitate payments for the 2 parties.
+
 ### R16 - Detail any third party services that your app will use
 
 * Stripe - this is used to handle users payments.
